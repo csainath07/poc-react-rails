@@ -14,6 +14,7 @@ const ReactApp: FC = () => {
       <BrowserRouter>
         <Switch>
           <Route exact={true} path="/">
+            <Link to="/dashboard">Dashboard(Rails View)</Link>&nbsp;&nbsp;
             <Link to="/assessments">Assessments</Link>&nbsp;&nbsp;
             <Link to="/assessments/settings">Settings</Link>
             <h1>Home Page</h1>
