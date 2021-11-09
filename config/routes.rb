@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   # rails routes
   get '/dashboard' => 'dashboard#index'
 
-  namespace :react do
+  namespace :v2 do
     get '/' => 'home#index'
     get '/*path' => 'home#index'
   end
 
   # React routes handling
-  root 'react/home#index'
+  root 'v2/home#index'
 end

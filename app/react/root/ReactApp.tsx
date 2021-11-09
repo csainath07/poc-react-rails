@@ -13,7 +13,7 @@ const ReactApp: FC = () => {
   console.log("React app initiated")
   return (
     <div className="app">
-      <BrowserRouter basename="/react">
+      <BrowserRouter basename="/v2">
         <Switch>
           <Route exact={true} path="/">
             <a href="/dashboard" data-turbolinks="false">Dashboard(Rails View)</a>&nbsp;&nbsp;
