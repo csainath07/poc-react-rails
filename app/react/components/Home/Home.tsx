@@ -15,6 +15,7 @@ const Home:FC<Props> = ({message = ''}) => {
         await axiosInstance.get('/dashboard/tasks')
       } catch(err) {
         console.log('error')
+        window.toastr && window.toastr.success("Error")
       }
     }
     apiCall();
