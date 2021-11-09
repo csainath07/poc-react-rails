@@ -1,4 +1,6 @@
-import React,{FC} from "react"
+import React,{FC, useEffect} from "react"
+
+import axiosInstance from "../../utils/api.instance"
 
 import './style.css'
 
@@ -7,6 +9,17 @@ interface Props {
 }
 
 const Home:FC<Props> = ({message = ''}) => {
+  useEffect(() => {
+    const apiCall = async() => {
+      try {
+        await axiosInstance.get('/dashboard/tasks')
+      } catch(err) {
+        console.log('error')
+      }
+    }
+    apiCall();
+  },[]);
+
   return (
     <h2 className="message">{message}</h2>
   )
