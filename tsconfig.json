@@ -11,8 +11,10 @@
     "jsx": "react",
     "typeRoots": [
       "node_modules/@types"
-    ]
+    ],
+    "baseUrl": "app/react"
   },
+  "include": ["app/react"],
   "exclude": [
     "**/*.spec.ts",
     "node_modules",
